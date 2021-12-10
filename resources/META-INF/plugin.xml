@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.wkl.restore.keystore.password</id>
+    <name>Restore Keystore</name>
+    <version>1.0</version>
+    <vendor email="kunlin.wang@foxmail.com" url="http://github.com/wangkunlin">WangKunlin</vendor>
+
+    <description><![CDATA[
+      The plugin can restore android keystore password
+    ]]></description>
+
+    <depends>org.jetbrains.android</depends>
+
+    <change-notes><![CDATA[
+      First publish plugin.<br>
+      <em> The plugin can restore android keystore password</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.wkl.restore.keystore.password.MyAction" class="com.wkl.restore.keystore.password.MyAction"
+                text="Restore Keystore Info" description="Restore Keystore Information">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
